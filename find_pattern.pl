@@ -88,7 +88,7 @@ print_clauses(_) :- logen_entry_point(ResCall,_),
 print_clauses(S) :-
     memo_table(_ID,Orig,Head,_),
     copy_term([Orig,Head], Copy),prettyvars(Copy),
-    (predicate_required(Head) -> format(S,"~n/*  ~w :- ~w. */~n",Copy) ; true),
+    (predicate_required(Head) -> format(S,"~n/*  ~q :- ~q. */~n",Copy) ; true),
     spec_clause(Head,C), /* for -wprop modus: somehow this portray clause triggers the earlier when declaration;  Ciao keeps the Co-Routines when asserting !!!!  */
     (spec_data(no_post_unfold,true) -> PC=C ; post_unfold(C,PC)),
     portray_clause(S,PC),

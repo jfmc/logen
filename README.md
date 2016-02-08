@@ -1,3 +1,10 @@
+# NOTE: Unofficial fork using new Ciao bundles
+
+Use `ciao get jfmc/logen` to install this fork. Logen binary should be available in `~/.ciao/build/bin/logen`.
+
+TODO:
+ - Fix testing
+
 # logen
 LOGEN is an offline partial evaluation system for Prolog written using the so called "cogen approach".
 Basically, the cogen is a system which: based upon an annotated version of the program to be specialised produces a specialised partial evaluator for that program.

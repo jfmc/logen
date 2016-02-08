@@ -16,7 +16,7 @@
     ]).
     
 :- use_module(tools).
-:- use_module(error_manager).   
+:- use_module('../../tools/error_manager').   
 :- use_module(library(lists)).
 
 :- dynamic change_flag/0.

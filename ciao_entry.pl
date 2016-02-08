@@ -12,22 +12,7 @@
 
 :- use_module('old_logen/logen_messages').
 
-%:- use_module(library(pathnames),[path_basename/2]).
-%---
-% (for older Ciao versions)
-:- use_module(library(lists), [append/3, reverse/2]).
-path_basename(Path, Base) :-
-	atom_codes(Path, PathS),
-	path_basename_(PathS, _, BaseS),
-	atom_codes(Base, BaseS).
-
-path_basename_(Path, _, Base) :-
-	reverse(Path, R),
-	( append(BaseR, "/"||_, R) ->
-	    reverse(BaseR, Base)
-	; Base = Path
-	).
-%---
+:- use_module(library(pathnames),[path_basename/2]).
 
 :- include(runtime_checks_perform).
 
