@@ -1,8 +1,13 @@
-# NOTE: Unofficial fork using new Ciao bundles
+*NOTE*: Unofficial fork using new Ciao bundles
 
-Use `ciao get jfmc/logen` to install this fork. Logen binary should be available in `~/.ciao/build/bin/logen`.
+Use a recent [Ciao version](http://github.com/ciao-lang/ciao) and
+`ciao get github.com/jfmc/logen` to install this fork. Logen binary
+should be available in `~/.ciao/build/bin/logen`. This version
+automatically points `logen_dir` to the logen source directory.
 
 TODO:
+ - Fix some compilation warnings and errors
+ - Cleanup directory hierarchy
  - Fix testing
 
 # logen
