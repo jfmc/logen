@@ -25,6 +25,9 @@ main(Args) :-
 	     (add_exception(ciao_entry, "Toplevel exception: ~n",[],E),
 	      halt(1))).
 
+% (Obtain logen dir from bundle source path -- JFMC)
+:- use_module(library(bundle/paths_extra), [fsR/2]).
+
 %% Simple bta entry point
 :- use_module(library(system),[current_env/2]). % corresponds to environ/2 in SICStus
 go(ArgV) :-
@@ -37,6 +40,7 @@ go(ArgV) :-
 	 ; current_env('LOGENDIR',Dir) -> set_cogen_relative_dir(Dir)
 	 ; current_env('LOGEN_DIR',Dir) -> set_cogen_relative_dir(Dir)
 	 ; current_env('LOGEN_HOME',Dir) -> set_cogen_relative_dir(Dir)
+	 ; fsR(bundle_src(logen), Dir) -> set_cogen_relative_dir(Dir)
 	 ; add_message(ciao_entry,2,"No -logen_dir D option or LOGENDIR environment set",[])),
 	fail.
   
