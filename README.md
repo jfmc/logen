@@ -1,9 +1,18 @@
-*NOTE*: Unofficial fork using new Ciao bundles
-
+**NOTE**: This is a fork of
+  [Logen](https://github.com/leuschel/logen). Please refer to the
+  original repository.
+  
 Use a recent [Ciao version](http://github.com/ciao-lang/ciao) and
 `ciao get github.com/jfmc/logen` to install this fork. Logen binary
 should be available in `~/.ciao/build/bin/logen`. This version
 automatically points `logen_dir` to the logen source directory.
+
+Changes in this fork:
+
+ - Packed as a Ciao bundle (see `Manifest`) (for this version, ignore
+   build instructions in the rest of this document)
+ - Enhanced comments mapping between logen and original predicates
+   (see `find_pattern.pl`).
 
 TODO:
  - Fix some compilation warnings and errors
