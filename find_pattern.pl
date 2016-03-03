@@ -119,11 +119,7 @@ predicate_required2(CH,_,_) :- logen_entry_point(CH,_).
 predicate_required2(CH,_,_) :- \+ deterministic(CH,_,_). /* we print non-deterministic predicates; they will not be post-unfolded */
 predicate_required2(_,F,N) :- multiple_use(F,N).  /* predicates that are used multiple of times are not post-unfolded */
 
-
-(predicate_required(Head) ->   format(S,"~n/*  ~q :- ~q. */~n",Copy) ; true),
-
 det(H) :- functor(H,F,N), functor(CH,F,N), deterministic(CH,_,_).
-((predicate_required(Head); det(Head)) ->   format(S,"~n/*  ~q :- ~q. */~n",Copy) ; true),
 
 post_unfold(':-'(H,B),':-'(H,PB)) :- 
     predicate_required(H),!,
