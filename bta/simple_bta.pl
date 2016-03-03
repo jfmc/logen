@@ -1,5 +1,5 @@
 :- module( simple_bta, [annotate_file/4,annotate_memo_clause/2]).
-:- use_module('../gximports/safe_call').
+:- use_module(logen(gximports/safe_call)).
 :- use_module(builtin_db).
 
 :- use_module('../annmeta',[declmeta/3]).

@@ -14,7 +14,7 @@
     ]).
     
 :- use_module(tools).
-:- use_module(logen(tools/error_manager)).
+:- use_module('../../tools/error_manager').   
 :- use_module(library(lists)).
 
 :- dynamic change_flag/0.
@@ -89,8 +89,6 @@ revert_preferences :- \+(pref_backup(_,_)),!, print_error('No previously backed-
 revert_preferences :- retractall(preference(_,_)),pref_backup(P,Val), assert(preference(P,Val)),fail.
 revert_preferences :- retractall(change_flag), (change_flag_backup -> assert_change_flag ; true).
 
-:- push_prolog_flag(multi_arity_warnings, off).
-
 reset_to_defaults :- reset_to_defaults(_).
 
 reset_to_defaults(Category) :- preference_category(Pref,Category),
@@ -99,8 +97,6 @@ reset_to_defaults(Category) :- preference_category(Pref,Category),
    assert(preference(Pref,Val)),
    fail.
 reset_to_defaults(_) :- assert_change_flag.
-
-:- pop_prolog_flag(multi_arity_warnings).
 
 :- dynamic preference/2.
 
@@ -209,10 +205,10 @@ is_of_type(X,term,X) :- nonvar(X).
 
 is_of_type(X,ListOfCsts,X) :- ListOfCsts=[_|_], member(X,ListOfCsts).
 
-is_of_type(X,dot_shape,Z) :- is_of_type(X,[triangle,ellipse,box,diamond,hexagon,octagon,house,
-                                         invtriangle,invhouse,invtrapez,doubleoctagon],Z).
+is_of_type(X,dot_shape,X) :- is_of_type(X,[triangle,ellipse,box,diamond,hexagon,octagon,house,
+                                         invtriangle,invhouse,invtrapez,doubleoctagon]).
                                          
-is_of_type(X,rgb_color,X) :-
+is_of_type(X,rgb_color) :-
    member(X,[red,green,blue,yellow,black,white,gray,brown,violet,darkred,tomato,darkblue,
              darkgray,darkviolet,darkslateblue,lightblue])
    ;
