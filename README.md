@@ -11,13 +11,15 @@ Changes in this fork:
 
  - Packed as a Ciao bundle (see `Manifest`) (for this version, ignore
    build instructions in the rest of this document)
+ - Minor changes to fix compilation errors and warnings
  - Enhanced comments mapping between logen and original predicates
    (see `find_pattern.pl`).
 
 TODO:
- - Fix some compilation warnings and errors
- - Cleanup directory hierarchy
- - Fix testing
+ - Fix testing (`ciao runtests` should run the tests in this bundle)
+ - Review code (e.g., use `meta_predicate` when needed, replace
+   `system` by `process_call`), directory hierarchy, etc. (probably
+   not worth here but in the original logen too)
 
 # logen
 LOGEN is an offline partial evaluation system for Prolog written using the so called "cogen approach".
