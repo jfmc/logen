@@ -16,7 +16,7 @@ Changes in this fork:
    (see `find_pattern.pl`).
 
 TODO:
- - Fix testing (`ciao runtests` should run the tests in this bundle)
+ - Fix testing (`ciao test` should run the tests in this bundle)
  - Review code (e.g., use `meta_predicate` when needed, replace
    `system` by `process_call`), directory hierarchy, etc. (probably
    not worth here but in the original logen too)
