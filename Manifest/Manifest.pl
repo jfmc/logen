@@ -1,6 +1,6 @@
 :- bundle(logen).
 version('1.0').
-depends([core]).
+depends([core-[version>='1.18']]).
 alias_paths([
     logen = '.'
 ]).
