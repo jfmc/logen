@@ -7,7 +7,7 @@
 
 :- use_module(library(iso_byte_char)).
 :- use_module(library(lists)).
-:- use_module(library(prolog_sys),[statistics/2]).
+:- use_module(engine(runtime_control),[statistics/2]).
 
 sample_file('sample.raw').
 

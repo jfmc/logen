@@ -1,6 +1,6 @@
 :- module(prolog_reader,
           [load_file/1, is_user_pred/1, is_built_in/1,
-           get_clause/2, clause/3],[assertions]).
+           get_clause/2, clause/3],[assertions, datafacts]).
 
 get_clause(H,B) :- clause(_File,H,B).
 
@@ -23,8 +23,9 @@ is_user_pred(P) :-
 :- pred dump
 # "Dumps clause/3 and imports/4 on the screen.".
 
-:- use_module(library('compiler/c_itf'),[process_file/7, clause_of/7,false/1, imports/5, defines_module/2]).
+:- use_module(library(compiler/c_itf),[process_file/7, clause_of/7,false/1, imports/5, defines_module/2]).
 :- use_module(library(format)).
+:- use_module(library(streams)).
 
 :- data clause/3, imports/4.
 

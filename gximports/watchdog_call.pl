@@ -118,7 +118,7 @@ check_var([V|T]) :-
     check_var(T).
 
 
-:- use_module(library(strings),[get_line/2]).
+:- use_module(library(stream_utils),[get_line/2]).
 
 
 :- dynamic ignore_watchdog_warnings/0.

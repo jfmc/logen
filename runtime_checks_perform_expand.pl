@@ -1,11 +1,10 @@
-
-:- module(runtime_checks_perform_expand,[ ignore_mnf/3 ],[ ]).
+:- module(runtime_checks_perform_expand, [ignore_mnf/3], [dynamic]).
 
 :- op(500,yfx,pre).
 :- op(500,yfx,post).
 :- op(500,yfx,unit_test).
 
-:- use_module(library(dynamic)).
+:- use_module(library(streams)).
 :- use_module(library(write)).
 
 :- dynamic perform_mnf_on_pred/2.

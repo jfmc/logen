@@ -180,6 +180,7 @@ strip_last([A|Tail],ResSoFar,StripSoFar,Res) :-
   
 /* for Ciao 
 :- use_module(library(dec10_io)).
+:- use_module(library(streams)).
 :- use_module(library(write)).
 
 prefix([],_).

@@ -5,6 +5,7 @@ logen task_csp_scheduler..pl "main(X)" > logen_out.txt
 logen task_csp_scheduler..pl "main2(X)" > logen_out2.txt
 */
 
+:- use_module(library(streams)).
 :- use_module(library(write)).
 %% :- use_module(library(format)).
 :- use_module(library(lists)).

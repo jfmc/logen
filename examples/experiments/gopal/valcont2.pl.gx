@@ -315,7 +315,7 @@ set_memodata_requestor([_OLD|MEMODATA],Req,[Req|MEMODATA]).
 get_memodata_id([_Req,ID|_MEMODATA],ID).
 set_memodata_id([Req,_|MEMODATA],ID,[Req,ID,MEMODATA]).
 init_memodata(Requestor,Parent,[Requestor,Parent]).
-:-use_module(library(strings),[get_line/2]).
+:-use_module(library(stream_utils),[get_line/2]).
 :- dynamic
         ignore_homeo_warnings/0.
 confirm_user(Problem,[Call,_History],c) :-

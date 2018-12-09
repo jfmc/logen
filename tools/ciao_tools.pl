@@ -1,10 +1,7 @@
-:- module(ciao_tools, [string_concatenate/3, read_from_chars/2, environ/2, print_error/1,
-   print_message/1,same_length/2, is_list_skel/1,
+:- module(ciao_tools, [
+	string_concatenate/3, read_from_chars/2, environ/2, print_error/1,
+	print_message/1,same_length/2, is_list_skel/1,
 	write_to_chars/2, format_to_chars/3]).
-
-
-
-
 
 :- set_prolog_flag(multi_arity_warnings,off).
 :- set_prolog_flag(discontiguous_warnings,off).
@@ -13,13 +10,10 @@
 :- use_module(library(lists)).
 :- use_module(library(compiler)).
 :- use_module(library(dec10_io)).
-:- use_module(library(prolog_sys)).
 :- use_module(library(terms_check)).
-:- use_module(library(dynamic)).
 :- use_module(library(system)).
 
-:- use_module(library(strings)).
-
+:- use_module(library(stream_utils), [get_line/2]).
 
 is_list_skel(X) :- nonvar(X), (X=[] -> true ; (X=[_|T], is_list_skel(T))).
 

@@ -6,7 +6,7 @@
 :- use_module('../bta/simple_bta.pl').
 :- use_module('../tools/error_manager.pl').
 :- use_module(library(system)).
-:- use_module(library(file_utils)).
+:- use_module(library(stream_utils), [file_to_string/2]).
 :- use_module('../runtime_checks.pl').
 
 :- dynamic pos_ann_clause/2.

@@ -7,6 +7,7 @@
 :- use_module(cogen_data).
 %:- use_module(errormanager).
 
+:- use_module(engine(basic_props), [list/1]).
 :- use_module(library(lists)).
 
 :- use_module('tools/ciao_tools.pl',[string_concatenate/3,environ/2,same_length/2]).

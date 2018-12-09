@@ -1,5 +1,5 @@
 
-:- use_module(library(strings),[get_line/2]).
+:- use_module(library(stream_utils),[get_line/2]).
 
 
 %:- use_module(runtime_checks).

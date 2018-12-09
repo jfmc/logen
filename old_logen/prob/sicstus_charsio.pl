@@ -20,6 +20,8 @@
 	    get0/2
 	],[]).
 
+:- use_module(library(streams), [get_code/2]).
+
 format_to_chars(_,_,_).
 format_to_chars(_,_,_,_).
 write_to_chars(_,_).
