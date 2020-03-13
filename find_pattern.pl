@@ -75,7 +75,7 @@ save_clauses([C| Cs]) :-
 
 print_memo_table(S) :-
     memo_table(A,B,C,D),
-    format(S,"/* ~w. */~n",[memo_table(A,B,C,D)]),
+    format(S,"/* ~q. */~n",[memo_table(A,B,C,D)]),
     fail.
 print_memo_table(_).
 
